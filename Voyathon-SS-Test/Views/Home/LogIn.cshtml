@@ -2,32 +2,95 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+
+
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-            <div class="card card-signin my-5">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Sign In</h5>
-                    <form class="form-signin">
-                        <div class="form-label-group">
-                            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                            <label for="inputEmail">Email address</label>
+    <div class="row">
+        <div class="col-md-4 accordion mx-auto">
+            
+            <div class="card rounded-0">
+                <div class="card-header">
+                    <h3 class="text-center">Login</h3>
+                </div>
+                <div class="card-body text-center align-items-center align-content-center">
+                    <form class="form" role="form" autocomplete="off" id="formLogin" method="POST">
+                        <div class="form-group">
+                            <label for="uname1">DNI:</label>
+                            <input type="text" class="form-control" name="uname1" id="uname1" style="align-items: center;" required />
+                            <div class="invalid-feedback">Ingrese un DNI</div>
                         </div>
 
-                        <div class="form-label-group">
-                            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                            <label for="inputPassword">Password</label>
+                        <div class="form-group">
+                            <label>Contraseña:</label>
+                            <input type="password" class="form-control form-control-lg rounded-0" id="pwd1" required autocomplete="new-password" />
+                            <div class="invalid-feedback">Ingresa una Contraseña</div>
                         </div>
 
-                        <div class="custom-control custom-checkbox mb-3">
-                            <input type="checkbox" class="custom-control-input" id="customCheck1">
-                            <label class="custom-control-label" for="customCheck1">Remember password</label>
-                        </div>
-                        <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
+                        <button type="submit" class="btn btn-success btn-lg " id="btnLogin">Conectate</button>
                     </form>
+
                 </div>
             </div>
         </div>
+
     </div>
 </div>
 
+<script>
+    // sandbox disable popups
+    if (window.self !== window.top && window.name != "view1") {
+        ;
+        window.alert = function () {/*disable alert*/ };
+        window.confirm = function () {/*disable confirm*/ };
+        window.prompt = function () {/*disable prompt*/ };
+        window.open = function () {/*disable open*/ };
+    }
+
+    // prevent href=# click jump
+    document.addEventListener("DOMContentLoaded", function () {
+        var links = document.getElementsByTagName("A");
+        for (var i = 0; i < links.length; i++) {
+            if (links[i].href.indexOf('#') != -1) {
+                links[i].addEventListener("click", function (e) {
+                    console.debug("prevent href=# click");
+                    if (this.hash) {
+                        if (this.hash == "#") {
+                            e.preventDefault();
+                            return false;
+                        }
+                        else {
+                            /*
+                            var el = document.getElementById(this.hash.replace(/#/, ""));
+                            if (el) {
+                              el.scrollIntoView(true);
+                            }
+                            */
+                        }
+                    }
+                    return false;
+                })
+            }
+        }
+    }, false);
+
+</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+
+<script>
+
+    $("#btnLogin").click(function (event) {
+
+        //Fetch form to apply custom Bootstrap validation
+        var form = $("#formLogin")
+
+        if (form[0].checkValidity() === false) {
+            event.preventDefault()
+            event.stopPropagation()
+        }
+
+        form.addClass('was-validated');
+    });
+
+
+</script>
