@@ -179,3 +179,9 @@ C:\Users\Usuario\Desktop\Voyathon-SS\Voyathon-SS-Test\obj\Debug\Voyathon-SS-Test
 C:\Users\Usuario\Desktop\Voyathon-SS\Voyathon-SS-Test\obj\Debug\Voyathon-SS-Test.csproj.CopyComplete
 C:\Users\Usuario\Desktop\Voyathon-SS\Voyathon-SS-Test\obj\Debug\Voyathon-SS-Test.dll
 C:\Users\Usuario\Desktop\Voyathon-SS\Voyathon-SS-Test\obj\Debug\Voyathon-SS-Test.pdb
+C:\Users\Usuario\Desktop\Voyathon-SS\Voyathon-SS-Test\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Usuario\Desktop\Voyathon-SS\Voyathon-SS-Test\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Usuario\Desktop\Voyathon-SS\Voyathon-SS-Test\bin\es\System.Web.Razor.resources.dll
+C:\Users\Usuario\Desktop\Voyathon-SS\Voyathon-SS-Test\bin\es\System.Web.WebPages.resources.dll
+C:\Users\Usuario\Desktop\Voyathon-SS\Voyathon-SS-Test\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Usuario\Desktop\Voyathon-SS\Voyathon-SS-Test\bin\es\System.Web.WebPages.Razor.resources.dll
