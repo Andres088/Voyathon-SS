@@ -1,2 +1,6 @@
 .vs/
 .packages/
+.Voyathon-SS-Test/obj/
+.Voyathon-SS-Test/bin/
+.Voyathon-SS/obj/
+.Voyathon-SS/bin/
