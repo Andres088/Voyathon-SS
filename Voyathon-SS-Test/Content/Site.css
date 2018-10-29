@@ -1,7 +1,10 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+    background: #00A651;
 }
+
+
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
@@ -21,4 +24,13 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+#panel {
+    background: #FFEF00;
+    border: 1px solid white;
+    text-align: center;
+    padding: 20px 20px;
+    margin-bottom: 20px;
+    border-radius: 2%;
 }

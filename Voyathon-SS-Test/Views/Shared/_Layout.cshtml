@@ -7,20 +7,21 @@
     <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
 </head>
 <body>
 
 
-    <div class="container" style="
+    <div class="container-fluid" style="
                             background: #FFEF00;
 	                        border: 1px solid white;
 	                        text-align: center;
-	                        padding: 20px 20px;
+                            margin-top: 0px;
 	                        margin-bottom: 20px;
 	                        border-radius: 2%;">
 
         <div class="row justify-content-center">
-            <img src="~/img/logo-inkafarma.png" style="padding: 20px 20px;" />
+            <img src="~/img/logo-inkafarma.png"  />
 
         </div>
 
@@ -53,13 +54,20 @@
 
 
     </div>
+        
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
-        </footer>
+       
+         
     </div>
+
+    <footer class="container-fluid" style="background: #FFEF00;">
+        <div class="row justify-content-center">
+            <img src="~/img/logo-inkafarma.png" />
+            <img src="~/img/logo2.png"
+        </div>
+    </footer>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
